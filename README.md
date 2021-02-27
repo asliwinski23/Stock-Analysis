@@ -16,7 +16,7 @@ The story for the 2018 analysis is not so bright, as seen in the image below. On
 ![2018_stock_performance_2](https://github.com/asliwinski23/Stock-Analysis/blob/main/2018_stock_performance_2.png)
 
 ### Script Execution Time
-I had refactored my original script. Below find comparison screenshots. The 2017 analysis had an 211% improvement in runtime. The 2018 analysis had a 205% improvement in runtime.
+I refactored my original script to improve runtime. Below find comparison screenshots. Both 2017 and 2018 analyses had a script runtime decrease of 78%.
 
 2017 Original Script:
 
@@ -44,10 +44,10 @@ I had refactored my original script. Below find comparison screenshots. The 2017
 ## Summary
 * What are the advantages or disadvantages of refactoring code?
 
-The most glaring advantage of refactoring your code is better runtimes. When a code is more precise and can run over code faster. In this analysis the runtime was reduced from iterating over the number of rows by how many tickers we are analyzing to iterating over all of the stock data once. Refactoring can also help those who may need to run your code understand what is happening easier as it is more concise. Lastly, refactoring is a great excercise for the programmer to think about the implementation of their code when it is refactored vs not refactored.
+The most glaring advantage of refactoring your code is better runtimes. In this analysis the runtime was reduced from iterating over the number of stock data rows by how many tickers we are analyzing (in this case 12) to iterating over all of the stock data rows once. Refactoring can also help those who may need to run or review your code to understand what is happening more clearly as the script becomes more concise. Lastly, refactoring is a great excercise for the programmer to think about the implementation of their code when it is refactored vs not refactored.
 
-Refactoring code can be a huge disadvantage if a team is working on a tight deadline. Programmers should not do refactoring at the last minute because you may not have the time to test the refactored code before release, which can introduce bugs. A way to mitigate the risk of introducing bugs into the code is to test. Depending on the company, the labor cost spend refactoring a large chunk of code can have adverse affects on financials, and for minimal return sometimes. In most cases, refactoring involves being more conscious of memory storage. However, to make this green stock analysis code run faster we saved each ticker's trade volume and price data in separate arrays, whereas in the original code these three elements were stored into three constant space variables. So in turn, we increased the memory usage in the refactored code.
+Refactoring code can be a huge disadvantage if a team is working on a tight deadline. Programmers should not do refactoring at the last minute because they may not have the time to test the refactored code before release, which can introduce bugs. A way to mitigate the risk of introducing bugs into the code is to test. Depending on the company, the labor cost that is created when programmers refactor a large chunk of code can have adverse affects on financials, and sometimes with minimal return. In most cases, refactoring involves being more conscious of memory storage. However, to make this green stock analysis code run faster we saved each ticker's trade volume and price data in separate arrays, each of size equal to number of stocks of interest. Whereas in the original code these three elements were stored into three constant space variables. So in turn, we increased the memory usage in the refactored code.
 
 * How do these pros and cons apply to refactoring the original VBA script?
 
-It definitely took me a lot longer to refactor my code than to write the original. Plus, it was a lot more frustrating to figure out how to compact and test my analyses. Luckily, I did not wait until the very last minute to work on this analysis, so the disadvantages were not as apparent in this refactoring. The improvement in runtime was well worth the time and effort put in.
+It definitely took me a lot longer to refactor my code than to write the original. Plus, it was considerably more frustrating to figure out how to compact and test my analyses. Luckily, I did not wait until the very last minute to work on this analysis, so the disadvantages were not as apparent in this refactoring. The improvement in runtime was well worth the time and effort put in.
